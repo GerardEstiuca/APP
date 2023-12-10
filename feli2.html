@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bones Festes!</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <div class="image-container">
+        <h2>Bones festes i Feliç 2024!</h2>
+    
+    </div>
+    <div class="image-final">
+        <h3>ESTIUCA 2023-2024</h3>
+    </div>
+
+    <div class="walking-icon">
+        <img src="https://raw.githubusercontent.com/GerardEstiuca/APP/main/LogoNadal1.png" alt="icona caminant" class="animate__animated animate__shakeY">
+
+        <audio id="myAudio">
+            <source src="https://raw.githubusercontent.com/GerardEstiuca/APP/main/merryChristmas.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+    </div>
+
+    <div class="walking-icon2 hidden">
+        <img id="santa" img src="https://raw.githubusercontent.com/GerardEstiuca/APP/main/LogoNadal.png" alt="icona caminant">
+    </div>
+
+    <div class="walking-icon3 hidden">
+        <img src="https://raw.githubusercontent.com/GerardEstiuca/APP/main/LogoNadal2.png" alt="icona caminant">
+    </div>
+
+    <div class="globus">
+        <img id="imatgeBoto" img src="https://raw.githubusercontent.com/GerardEstiuca/APP/main/Clicam.png" alt="clicam">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+             $.fn.snow();   
+
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".globus img").on("animationend", function() {
+                // Canviar l'aspecte o el comportament de la imatge perquè funcioni com un botó
+                $("#imatgeBoto").addClass("botonActiu");
+            });
+        });
+    </script>
+    <script>
+        $("#imatgeBoto").click(function() {
+            setTimeout(function() {
+                var audio = document.getElementById("myAudio");
+                audio.playbackRate = 1.5; // Això augmenta la velocitat a 1.5 vegades la normal
+                audio.play();
+            }, 500); // Retard de 1000 mil·lisegons (1 segon)
+
+            $(".walking-icon").addClass("hidden");
+            $(".globus").addClass("hidden");
+            $(".walking-icon2").removeClass("hidden");
+            setTimeout(function() {
+                $(".walking-icon2").addClass("hidden");
+                $(".walking-icon3").removeClass("hidden");
+            }, 3000); // Retard de 1000 mil·lisegons (1 segon)
+            setTimeout(function() {
+                $(".walking-icon2").removeClass("hidden");
+                $(".walking-icon3").addClass("hidden");
+            }, 3300); // Retard de 1000 mil·lisegons (1 segon)
+
+        }); 
+    </script>
+
+    <script>
+        $("#santa").click(function() {
+    location.reload(); // Això recarregarà la pàgina
+});
+
+
+    </script>
+</body>
+</html>

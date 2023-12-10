@@ -1,0 +1,142 @@
+body {
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            background-image: url('https://raw.githubusercontent.com/GerardEstiuca/APP/main/Fons_felicitacio.png'); /* Afegim la imatge de fons */
+            background-size: cover; /* Escalat de la imatge per cobrir tot el fons */
+            background-repeat: no-repeat; /* Evita la repetició de la imatge */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .image-container {
+            border: transparent;
+            padding:250px;
+            width: 900px;
+            text-align: center;
+            position: relative; /* Añadido para posicionar la imagen respecto a este contenedor */
+            
+        }
+        
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.3) 5%, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.05) 40%, rgba(255, 255, 255, 0.025) 70%, rgba(255, 255, 255, 0.0125) 100%);
+            opacity: 0.3;
+            
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            position: absolute; /* Posicionamiento absoluto para la imagen */
+            bottom: 0; /* Situar en la parte inferior del contenedor */
+            right: 0; /* Situar en la parte derecha del contenedor */
+            top:0;
+            
+            
+        }
+
+        .image-container h2 {
+            font-size: 100px;
+            font-family: 'Winter Wishes', sans-serif;
+            white-space: nowrap; /* Evita que el text es talli en múltiples línies */
+            margin-top: -35px; /* Ajusta el valor negatiu per elevar les lletres */
+            text-align: center;
+            
+        }
+
+        .image-final {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+        }
+        
+        .image-final h3{
+            font-size: 20px;
+            font-family: 'Winter Wishes', sans-serif;
+            white-space: nowrap; /* Evita que el text es talli en múltiples línies */
+            margin-left: 20px;
+
+        }
+
+                /* Configura les dues imatges inicialment com a totalment transparents */
+        .walking-icon img {
+            opacity: 1;
+            height: 375px;
+            width: auto;
+            position: absolute;
+            bottom: 50px;
+            right: 750px;
+            animation: shakeY 1.2s ease-in-out forwards;
+            animation-delay: 1s;
+            cursor: pointer;
+        }
+
+        .walking-icon2 img {
+            opacity: 1;
+            height: 375px;
+            width: auto;
+            position: absolute;
+            bottom: 50px;
+            right: 750px;
+            animation: heartBeat 3s ease-in-out 1s infinite;
+            animation-delay: 1s;
+        }
+        .walking-icon3 img {
+            opacity: 1;
+            height: 375px;
+            width: auto;
+            position: absolute;
+            bottom: 50px;
+            right: 750px;
+            animation: heartBeat 3s ease-in-out 1s infinite;
+            
+        }
+
+        .globus img {
+            opacity: 0;
+            height: 120px;
+            width: auto;
+            position: absolute;
+            bottom: 300px;
+            right: 675px;
+            animation: appear 1s ease-in-out forwards 1s, heartBeat 3s ease-in-out 1s infinite;
+
+        }
+    
+        .botonActiu {
+            /* Estils per al botó actiu */
+            cursor: pointer;
+            /* Altres estils necessaris */
+        }
+
+        .hidden {
+            display: none;
+        }
+        
+
+        @keyframes appear {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        
+           
+       
+        
+        
+        
